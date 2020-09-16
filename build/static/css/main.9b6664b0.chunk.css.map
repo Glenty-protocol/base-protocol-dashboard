@@ -1,0 +1,1 @@
+{"version":3,"sources":["dark-bg.css"],"names":[],"mappings":"AAAA,UAEE,kEAAiD,CACjD,qBAAsB,CACtB,2BAA4B,CAC5B,2BACF","file":"main.9b6664b0.chunk.css","sourcesContent":["html,\nbody {\n  background: url(\"./black-bg-long.png\") !important;\n  background-size: cover;\n  background-position: 50% 50%;\n  background-repeat: no-repeat;\n}\n"]}

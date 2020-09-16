@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9b6664b0.chunk.css",
+    "main.js": "/static/js/main.3ccbc3f5.chunk.js",
+    "main.js.map": "/static/js/main.3ccbc3f5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f6b81087.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f6b81087.js.map",
+    "static/css/2.d4e7eff5.chunk.css": "/static/css/2.d4e7eff5.chunk.css",
+    "static/js/2.8b55675b.chunk.js": "/static/js/2.8b55675b.chunk.js",
+    "static/js/2.8b55675b.chunk.js.map": "/static/js/2.8b55675b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.01a8430754fc662f15462a066e5d84b8.js": "/precache-manifest.01a8430754fc662f15462a066e5d84b8.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.d4e7eff5.chunk.css.map": "/static/css/2.d4e7eff5.chunk.css.map",
+    "static/css/main.9b6664b0.chunk.css.map": "/static/css/main.9b6664b0.chunk.css.map",
+    "static/js/2.8b55675b.chunk.js.LICENSE.txt": "/static/js/2.8b55675b.chunk.js.LICENSE.txt",
+    "static/media/dark-bg.css": "/static/media/black-bg-long.39ba6af2.png",
+    "static/media/dashboard.svg": "/static/media/dashboard.18077031.svg",
+    "static/media/discordIcon.svg": "/static/media/discordIcon.2b6c02c7.svg",
+    "static/media/down.svg": "/static/media/down.7f5b197a.svg",
+    "static/media/emailIcon.svg": "/static/media/emailIcon.a80290c9.svg",
+    "static/media/grid-loading.svg": "/static/media/grid-loading.272baf8c.svg",
+    "static/media/mediumIcon.svg": "/static/media/mediumIcon.1842fc06.svg",
+    "static/media/money.svg": "/static/media/money.b72ccf79.svg",
+    "static/media/navbar-bg.png": "/static/media/navbar-bg.64419ce1.png",
+    "static/media/rainbow-bg.png": "/static/media/rainbow-bg.d1a6310b.png",
+    "static/media/rebase-logo.svg": "/static/media/rebase-logo.537ed868.svg",
+    "static/media/rebase-oracle.png": "/static/media/rebase-oracle.bb03c969.png",
+    "static/media/server.svg": "/static/media/server.2928f907.svg",
+    "static/media/twitterIcon.svg": "/static/media/twitterIcon.1d982a2d.svg",
+    "static/media/white-btn-bg.png": "/static/media/white-btn-bg.a1ba23a4.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f6b81087.js",
+    "static/css/2.d4e7eff5.chunk.css",
+    "static/js/2.8b55675b.chunk.js",
+    "static/css/main.9b6664b0.chunk.css",
+    "static/js/main.3ccbc3f5.chunk.js"
+  ]
+}
