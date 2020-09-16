@@ -6,7 +6,7 @@ marketCapAPI.getSnapshot = async () => {
   try {
     const { data: { marketCapSS } } = await axios({
       method: 'GET',
-      url: 'https://api.baseprotocol.org/api/market-cap-history'
+      url: 'http://localhost:4000/api/market-cap-history'
     })
 
     return marketCapSS
