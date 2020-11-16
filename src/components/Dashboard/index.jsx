@@ -163,9 +163,6 @@ function Dashboard() {
       const clMarketCap = Number(oracleMCHistory.medianData[oracleMCHistory.medianData.length - 1].median)
       
       const ssData = await marketCapAPI.getSnapshot();
-      setTimeout(() => {
-        setIsLoading(true);
-      }, 1500);
 
       const medianStatsSS = oracleMCHistory
       setMedianStats(medianStatsSS);
@@ -180,6 +177,7 @@ function Dashboard() {
 
       const allStatsSS = marketCapAPI.getAllMCStats(ssData);
       setAllStats(allStatsSS);
+      setIsLoading(true);
     })();
   }, []);
 
