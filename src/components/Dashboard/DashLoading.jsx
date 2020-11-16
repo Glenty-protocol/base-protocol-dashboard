@@ -1,12 +1,11 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import gridLoading from './assets/grid-loading.svg'
-import baseLogo from './../General/Navbar/baseLogo.png'
-import rainbowBG from './assets/rainbow-bg.png'
+import gridLoading from "./assets/grid-loading.svg";
+import baseLogo from "./../General/Navbar/baseLogo.png";
+import rainbowBG from "./assets/rainbow-bg.png";
 
-import Navbar from './../General/Navbar'
-
+import Navbar from "./../General/Navbar";
 
 const SDashLoadingWrapper = styled.section`
   @keyframes rotation {
@@ -29,7 +28,9 @@ const SDashLoadingWrapper = styled.section`
   flex-direction: column;
   background: #eaeaea;
   > img {
-    animation: rotation 1s infinite linear;
+    @media (min-width: 700px) {
+      animation: rotation 1s infinite linear;
+    }
     height: 128px;
   }
   span {
@@ -37,18 +38,25 @@ const SDashLoadingWrapper = styled.section`
     font-size: 18px;
     margin-top: 8px;
   }
-`
+`;
 
 const SBottomColorBox = styled.div`
   height: 3px;
   width: 100%;
   background: #474661;
-  background-image: linear-gradient(115deg,#27e3fd,#22e252 25%,#fecf3d 57%,#f61528 86%,#7f74f8);
+  background-image: linear-gradient(
+    115deg,
+    #27e3fd,
+    #22e252 25%,
+    #fecf3d 57%,
+    #f61528 86%,
+    #7f74f8
+  );
   background-size: cover;
   position: fixed;
   bottom: 0;
   left: 0;
-`
+`;
 
 function DashLoading() {
   return (
@@ -58,7 +66,7 @@ function DashLoading() {
       {/* <span>Loading Dashboard...</span> */}
       {/* <SBottomColorBox /> */}
     </SDashLoadingWrapper>
-  )
+  );
 }
 
-export default DashLoading
+export default DashLoading;

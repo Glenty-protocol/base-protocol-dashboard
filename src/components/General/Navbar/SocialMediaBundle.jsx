@@ -40,7 +40,7 @@ function SocialMediaBundle() {
       <SSocialMediaBtn href="https://t.me/baseprotocol" target="_blank">
         <img alt="Telegram" src={emailIcon} />
       </SSocialMediaBtn>
-      <SSocialMediaBtn style={{ marginRight: 0 }} href="https://medium.com/baseprotocol" target="_blank">
+      <SSocialMediaBtn style={{ marginRight: 0 }} href="https://medium.com/@BaseProtocol" target="_blank">
         <img alt="Medium" src={mediumIcon} />
       </SSocialMediaBtn>
     </ SSocialMediaWrapper>

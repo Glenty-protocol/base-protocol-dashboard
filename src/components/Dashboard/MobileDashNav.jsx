@@ -5,34 +5,36 @@ import dashboardImg from "./assets/dashboard.svg";
 import moneyImg from "./assets/money.svg";
 import serverImg from "./assets/server.svg";
 
-const SDashNav = styled.div`
-  height: calc(100% - 80px);
-  width: 50px;
-  background: #191919;
+const MobileDashNavContainer = styled.div`
   position: fixed;
-  left: 0;
-  top: 90px;
-  box-shadow: 0px -2px 25px -3px rgba(0, 0, 0, 0.2);
-  @media (min-width: 1900px) {
-    width: 180px;
-  }
+  bottom: 3px;
+  left: 0px;
+  width: 100%;
+  height: 60px;
+  background: #191919;
+  display: none;
   @media (max-width: 700px) {
-    display: none;
+    display: flex;
+    justify-content: space-evenly;
   }
 `;
 
 const SDashNavItem = styled.div`
   height: 70px;
+  flex: 1;
+  width: 33.33%;
   background: ${(props) =>
-    props.selected ? "rgb(66, 65, 65)" : "transparent"};
+    props.selected
+      ? "linear-gradient(115deg,#27e3fd,#22e252 25%,#fecf3d 57%,#f61528 86%,#7f74f8)"
+      : "transparent"};
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
   transition: ease-in-out all 0.15s;
   cursor: pointer;
   img {
-    height: 18px;
+    height: 20px;
   }
   span {
     color: rgba(255, 255, 255);
@@ -57,9 +59,9 @@ const SDashNavItem = styled.div`
   }
 `;
 
-function DashNav({ selectedNavItem, setSelectedNavItem }) {
+function MobileDashNav({ selectedNavItem, setSelectedNavItem }) {
   return (
-    <SDashNav>
+    <MobileDashNavContainer>
       <SDashNavItem
         selected={selectedNavItem === "overview"}
         onClick={() => setSelectedNavItem("overview")}
@@ -81,8 +83,8 @@ function DashNav({ selectedNavItem, setSelectedNavItem }) {
         <img src={serverImg} alt="Data" />
         <span>Oracles</span>
       </SDashNavItem>
-    </SDashNav>
+    </MobileDashNavContainer>
   );
 }
 
-export default DashNav;
+export default MobileDashNav;

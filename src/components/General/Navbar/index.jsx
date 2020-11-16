@@ -110,9 +110,9 @@ function Navbar() {
               isNavItemOpen={isNavItemOpen}
               setIsNavItemOpen={() => setIsNavItemOpen(!isNavItemOpen)}
             />
-            <SNavLink href="https://www.baseprotocol.org/#ILO-Link">Ilo</SNavLink>
+            <SNavLink href="https://www.baseprotocol.org/presale">Join</SNavLink>
             <SNavLink href="https://github.com/Base-Protocol" target="_blank">Github</SNavLink>
-            <SNavLink href="https://geyser.baseprotocol.org/">Geyser</SNavLink>
+            <SNavLink href="https://cascade.baseprotocol.org/">Cascade</SNavLink>
             <SNavLink href="https://dashboard.baseprotocol.org/">Dashboard</SNavLink>
           </SNavbarLeftContent>
         </SNavbarLeft>
@@ -121,7 +121,7 @@ function Navbar() {
           <BaseBtn
             marginRight={'28px'}
             isMainNavbar={true}
-            href={'https://www.baseprotocol.org/iloform'}
+            href={'https://www.baseprotocol.org/presale'}
           />
           <SocialMediaBundle />
           <SHamburgerMenu

@@ -43,7 +43,7 @@ const SBaseBtnOutter = styled.div`
   }
 `
 
-function BaseBtn({ text = 'PRESALE', marginRight, isMainNavbar, href }) {
+function BaseBtn({ text = 'TOKEN SALE', marginRight, isMainNavbar, href }) {
   return (
     <SBaseBtnOutter marginRight={marginRight} isMainNavbar={isMainNavbar}>
       <SBaseBtnUpper isMainNavbar={isMainNavbar} href={href}>

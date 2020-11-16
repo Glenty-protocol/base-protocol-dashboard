@@ -59,9 +59,9 @@ function MobileNavContent(props) {
           <img alt="Base Logo" src={baseLogo} />
         </SBaseLogoA> */}
         <SNavLink href="https://www.baseprotocol.org/">Learn</SNavLink>
-        <SNavLink href="https://www.baseprotocol.org/#ILO-Link">Ilo</SNavLink>
+        <SNavLink href="https://www.baseprotocol.org/presale">Join</SNavLink>
         <SNavLink href="https://www.baseprotocol.org/#Tech-Link">Github</SNavLink>
-        <SNavLink href="https://geyser.baseprotocol.org/">Geyser</SNavLink>
+        <SNavLink href="https://cascade.baseprotocol.org/">Cascade</SNavLink>
         <SNavLink href="https://dashboard.baseprotocol.org/">Dashboard</SNavLink>
         <BaseBtn href="https://www.baseprotocol.org/iloform" marginRight={'-20px'} />
       </SMobileContentWrapper>
