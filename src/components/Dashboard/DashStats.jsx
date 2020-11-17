@@ -4,6 +4,7 @@ import { InfoCircleOutlined } from '@ant-design/icons'
 import { Tooltip } from 'antd';
 
 // Assets
+import chainlinkLogo from './assets/chainlink-link-logo.png'
 import rainbowBg from './assets/rainbow-bg.png'
 
 const SContainer = styled.div`
@@ -72,9 +73,12 @@ const SDashStatsSmallText = styled.span`
   position: absolute;
   bottom: 10px;
   color: rgba(255, 255, 255, .40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
-function DashStats({ label, value, infoText, marginRight, secondText }) {
+function DashStats({ label, value, infoText, marginRight, secondText, showChainlinkLogo }) {
   return (
     <SContainer marginRight={marginRight}>
       <SRainbow>
@@ -85,7 +89,7 @@ function DashStats({ label, value, infoText, marginRight, secondText }) {
             <InfoCircleOutlined />
           </SInfoBtn>
         </Tooltip>
-        {secondText ? <SDashStatsSmallText>{secondText}</SDashStatsSmallText> : null}
+        {secondText ? <SDashStatsSmallText>{secondText} {showChainlinkLogo && <img alt="Chainlink Logo" style={{ height: 14, paddingLeft: 4 }} src={chainlinkLogo} />}</SDashStatsSmallText> : null}
 
       </SRainbow>
     </SContainer>

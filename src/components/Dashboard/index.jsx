@@ -210,6 +210,8 @@ function Dashboard() {
                 <DashStats
                   label={"Crypto Market Cap"}
                   value={`$ ${cryptoMarketCap} B`}
+                  secondText={"powered by chainlink"}
+                  showChainlinkLogo
                   infoText={`The tip is shown on mouse enter, and is hidden on mouse leave. The Tooltip doesn't support complex text or operations. To provide an explanation of a button/text/operation. It's often used instead of the html title attribute.`}
                 />
               </SDashStatsWrapper>
@@ -248,7 +250,7 @@ function Dashboard() {
                     }}
                   >
                     <CartesianGrid strokeOpacity={0.2} strokeDasharray="0 0" />
-                    <XAxis dataKey="timestamp" />
+                    <XAxis dataKey="timestamp" minTickGap={20} />
                     <YAxis
                       domain={[medianStats.medianMin, medianStats.medianMax]}
                     />
@@ -262,7 +264,7 @@ function Dashboard() {
                   </AreaChart>
                 </ResponsiveContainer>
               </ChartCard>
-              <ChartCard style={{ marginTop: 24 }}>
+              <ChartCard style={{ marginTop: 24, paddingRight: 12 }}>
                 <SChartTitle>
                   Market Cap Sources
                   <SSmallTitleText>(in billions)</SSmallTitleText>
