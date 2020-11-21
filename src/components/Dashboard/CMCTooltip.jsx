@@ -27,8 +27,6 @@ function CMCTooltip(props) {
   let timestamp = ''
   let median = ''
   if (active) {
-    console.log(props)
-
     timestamp = payload[0].payload.name
     median = payload[0].payload.median
   }

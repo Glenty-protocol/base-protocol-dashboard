@@ -23,7 +23,7 @@ import BaseContent from "./BaseContent";
 import MobileDashNav from "./MobileDashNav";
 import CMCTooltip from './CMCTooltip'
 
-import clOracle from '../../api/oracle'
+// import clOracle from '../../api/oracle'
 import marketCapAPI from "./../../api/marketCapAPI";
 
 import "./assets/dark-bg.css";
@@ -200,38 +200,38 @@ function Dashboard() {
                 <DashStats
                   label={"Current BASE Price"}
                   value={`---`}
-                  infoText={`The tip is shown on mouse enter, and is hidden on mouse leave. The Tooltip doesn't support complex text or operations. To provide an explanation of a button/text/operation. It's often used instead of the html title attribute.`}
+                  infoText={'The current spot price of BASE.'}
                 />
                 <DashStats
                   label={"Target BASE Price"}
                   value={`$ ${baseTargetPrice}`}
-                  infoText={`The tip is shown on mouse enter, and is hidden on mouse leave. The Tooltip doesn't support complex text or operations. To provide an explanation of a button/text/operation. It's often used instead of the html title attribute.`}
+                  infoText={'The price at which BASE correlates with total crypto market cap.'}
                 />
                 <DashStats
                   label={"Crypto Market Cap"}
                   value={`$ ${cryptoMarketCap} B`}
-                  secondText={"powered by chainlink"}
+                  secondText={"powered by Chainlink"}
                   showChainlinkLogo
-                  infoText={`The tip is shown on mouse enter, and is hidden on mouse leave. The Tooltip doesn't support complex text or operations. To provide an explanation of a button/text/operation. It's often used instead of the html title attribute.`}
+                  infoText={'The total market capitalization of all cryptocurrencies.'}
                 />
               </SDashStatsWrapper>
               <SDashStatsWrapper>
                 <DashStats
                   label={"Next Rebase"}
                   value={"00:00:00"}
-                  infoText={`The tip is shown on mouse enter, and is hidden on mouse leave. The Tooltip doesn't support complex text or operations. To provide an explanation of a button/text/operation. It's often used instead of the html title attribute.`}
+                  infoText={'When the next supply adjustment will occur.'}
                 />
                 <DashStats
                   label={"Rebase Factor"}
                   value={`0%`}
-                  infoText={`The tip is shown on mouse enter, and is hidden on mouse leave. The Tooltip doesn't support complex text or operations. To provide an explanation of a button/text/operation. It's often used instead of the html title attribute.`}
+                  infoText={'How much supply will expand (+) or contract (-).'}
                   secondText={"+/- (x) tokens"}
                 />
                 <DashStats
                   label={"Current Supply"}
                   value={`---`}
+                  infoText={'Current total BASE supply.'}
                   secondText={"+/- (x) tokens after rebase"}
-                  infoText={`The tip is shown on mouse enter, and is hidden on mouse leave. The Tooltip doesn't support complex text or operations. To provide an explanation of a button/text/operation. It's often used instead of the html title attribute.`}
                 />
               </SDashStatsWrapper>
               <ChartCard>
@@ -250,7 +250,7 @@ function Dashboard() {
                     }}
                   >
                     <CartesianGrid strokeOpacity={0.2} strokeDasharray="0 0" />
-                    <XAxis dataKey="timestamp" minTickGap={20} />
+                    <XAxis dataKey="timestamp" minTickGap={20} dy={8} />
                     <YAxis
                       domain={[medianStats.medianMin, medianStats.medianMax]}
                     />
@@ -264,18 +264,18 @@ function Dashboard() {
                   </AreaChart>
                 </ResponsiveContainer>
               </ChartCard>
-              <ChartCard style={{ marginTop: 24, paddingRight: 12 }}>
+              <ChartCard style={{ marginTop: 24 }}>
                 <SChartTitle>
                   Market Cap Sources
                   <SSmallTitleText>(in billions)</SSmallTitleText>
                 </SChartTitle>
-                <ResponsiveContainer width={"100%"} height={300}>
+                <ResponsiveContainer width={"98%"} height={300}>
                   <LineChart
                     data={allStats.siteArr}
-                    margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+                    margin={{ top: 5, right: 10, left: 10, bottom: 5 }}
                   >
                     <CartesianGrid strokeOpacity={0.2} strokeDasharray="0 0" />
-                    <XAxis dataKey="name" />
+                    <XAxis dataKey="name" minTickGap={10} dy={8} />
                     <YAxis
                       domain={[allStats.siteMax - 20, allStats.siteMax - 30]}
                     />

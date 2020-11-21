@@ -78,6 +78,16 @@ const SDashStatsSmallText = styled.span`
   justify-content: center;
 `
 
+const SDashStatsA = styled.a`
+  font-size: 12px;
+  position: absolute;
+  bottom: 10px;
+  color: rgba(255, 255, 255, .40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
 function DashStats({ label, value, infoText, marginRight, secondText, showChainlinkLogo }) {
   return (
     <SContainer marginRight={marginRight}>
@@ -89,8 +99,14 @@ function DashStats({ label, value, infoText, marginRight, secondText, showChainl
             <InfoCircleOutlined />
           </SInfoBtn>
         </Tooltip>
-        {secondText ? <SDashStatsSmallText>{secondText} {showChainlinkLogo && <img alt="Chainlink Logo" style={{ height: 14, paddingLeft: 4 }} src={chainlinkLogo} />}</SDashStatsSmallText> : null}
-
+        
+        {secondText && !showChainlinkLogo ? <SDashStatsSmallText>{secondText}</SDashStatsSmallText> : null}
+        {secondText && showChainlinkLogo ?
+          <SDashStatsA href="https://chain.link/" target="_blank">
+            {secondText} <img alt="Chainlink Logo" style={{ height: 18, paddingLeft: 6, marginBottom: 2 }} src={chainlinkLogo} />
+          </SDashStatsA>
+        : null}
+         
       </SRainbow>
     </SContainer>
   )

@@ -91,6 +91,9 @@ marketCapAPI.getAllMCStats = (data) => {
     const obj = {};
     _.uniqBy(filteredMarketCaps, "site").forEach(
       ({ site, value: marketCap }, idx) => {
+        if (marketCap / Math.pow(10, 9) <= 300) {
+          return
+        }
         obj.name = timestamp;
         obj[site.split("-").join("_")] = (marketCap / Math.pow(10, 9)).toFixed(
           2,
