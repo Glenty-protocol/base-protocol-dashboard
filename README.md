@@ -1,5 +1,6 @@
-## Base Protocol Dashboard
+## GLENTY Protocol Dashboard
 
+Provides rebase stats & history
 #### Instructions
 
 - `npm i`
